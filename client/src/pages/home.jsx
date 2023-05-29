@@ -16,7 +16,7 @@ export const Home = (props) => {
         </div>
       </header>
       <section id="hero-section">
-        <div className="flex max-lg:flex-col max-lg:justify-center items-center text-white">
+        <div className=" flex max-lg:flex-col max-lg:justify-center items-center text-white">
           <div className="max-lg:pl-0 max-lg:mt-72 pl-40 w-8/12 text-left max-lg:text-center max-sm:mt-24 max-mobileSm:mt-32">
             <h2 className="text-4xl max-xl:text-3xl 2xl:text-6xl font-bold tracking-widest max-lg:text-6xl max-sm:text-4xl max-mobileSm:text-xl">
               Personalize It!
@@ -94,7 +94,7 @@ export const Home = (props) => {
                   <p className="font-extrabold text-4xl product-price">
                     ${product.price}
                   </p>
-                  <div className="gap-2 flex flex-col items-center">
+                  <div className="gap-2 flex flex-col items-center pb-20">
                     <Link className="buy-button">Buy</Link>
                     <Link className="personalize-button">Personalize It!</Link>
                   </div>
@@ -102,6 +102,62 @@ export const Home = (props) => {
               );
             })}
           </div>
+        </div>
+      </section>
+      <section id="search-all" className="relative overflow-hidden">
+        <div className="relative px-24">
+          <div className="pt-24 pb-8">
+            <h4 className="text-5xl">EXPLORE ALL</h4>
+            <h5 className="text-3xl font-light">SEARCH ALL CATEGORIES</h5>
+          </div>
+          <div className="grid grid-cols-6 grid-rows-2 gap-5 z-10 relative grid-categories">
+            <div className="row-span-2 ">
+              <img className="object-cover h-full" src="/img/bag.webp"></img>
+              <Link className="absolute bottom-2 left-4">See HandBags</Link>
+            </div>
+            <div className="col-span-2">
+              <img
+                className="w-full object-cover"
+                src="/img/shirtcat.png"
+              ></img>
+              <Link className="absolute bottom-2 left-4">See T-shirts</Link>
+            </div>
+            <div className="row-span-2">
+              <img
+                className="object-cover h-full"
+                src="/img/stickers.png"
+              ></img>
+              <Link className="absolute bottom-2 left-4">See Stickers</Link>
+            </div>
+            <div>
+              <img
+                className="object-cover h-full"
+                src="/img/creativeshirt.png"
+              ></img>
+              <Link className="absolute bottom-2 left-4">See Hoddies</Link>
+            </div>
+            <div className="row-span-2">
+              <img className="h-full object-cover" src="/img/jacket.webp"></img>
+              <Link className="absolute bottom-2 left-4">See Jackets</Link>
+            </div>
+            <div className="col-span-2">
+              <img className="h-full object-cover" src="/img/gap.webp"></img>
+              <Link className="absolute bottom-2 left-4">See Gaps</Link>
+            </div>
+            <div>
+              <img
+                className="h-full object-cover"
+                src="/img/creativebag.png"
+              ></img>
+              <Link className="absolute bottom-2 left-4">See Bags</Link>
+            </div>
+          </div>
+        </div>
+        <div className="overflow-hidden">
+          <img
+            className="shirtbackground overflow-hidden"
+            src="/img/shirtbackground.webp"
+          ></img>
         </div>
       </section>
     </>

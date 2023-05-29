@@ -163,3 +163,34 @@ header div a:not(:first-child) {
   transition: opacity 400ms ease;
   opacity: 0.8;
 }
+#search-all{
+  color:white;
+  background: rgba(0, 0, 0, 0.876) url("/public/img/backgroundCat.png");
+  background-blend-mode: overlay;
+}
+.shirtbackground{
+  position: absolute;
+  width: 60%;
+  top:0;
+  right:0;
+  z-index:1;
+  transform: rotate(-20deg);
+}
+.grid-categories div{
+  position: relative;
+}
+.grid-categories div a{
+  background:#0cc3d0e4;
+  font-size:2rem;
+  padding: 2px 15px;
+  border-radius: 5px;
+}
+
+.grid-categories img{
+  transition: filter 500ms ease;
+  filter:brightness(0.7) saturate(1.5);
+}
+.grid-categories img:hover{
+  filter: brightness(1.1);
+  transition: filter 500ms ease;
+}
