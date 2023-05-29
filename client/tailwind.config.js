@@ -7,6 +7,9 @@ module.exports = {
         'mobileSm': "388px",
         'mobileExtraSm': "303px",
       },
+      colors: {
+        'main': '#0cc2d0',
+      },
     },
   },
   plugins: [],
