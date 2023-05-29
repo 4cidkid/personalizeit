@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Home = ({ products }) => {
+export const Home = (props) => {
   return (
     <>
       <header className="absolute top-0 w-full">
@@ -72,6 +72,37 @@ export const Home = ({ products }) => {
             </li>
           </ul>
         </nav>
+      </section>
+      <section id="new-arrival">
+        <div className="text-center">
+          <div className="my-12">
+            <h3 className="text-5xl">NEWS ARRIVALS</h3>
+            <h4 className="text-3xl font-light">EXCLUSIVE CLOTHES</h4>
+          </div>
+          <div className="flex flex-wrap gap-5 gap-y-20 justify-center">
+            {props.dummyData?.map((product) => {
+              return (
+                <div
+                  className="flex flex-col items-center w-1/6 relative"
+                  key={product.name + Math.random()}
+                >
+                  <img src={product.img}></img>
+                  <p className="absolute z-10 top-0 right-0 px-7 py-2 text-base font-bold category text-white">
+                    {product.category}
+                  </p>
+                  <p className="font-extrabold product-name">{product.name}</p>
+                  <p className="font-extrabold text-4xl product-price">
+                    ${product.price}
+                  </p>
+                  <div className="gap-2 flex flex-col items-center">
+                    <Link className="buy-button">Buy</Link>
+                    <Link className="personalize-button">Personalize It!</Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </section>
     </>
   );
