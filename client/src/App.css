@@ -64,7 +64,8 @@ header div a:not(:first-child){
 }
 #hero-section nav{
   background:rgba(0, 0, 0, 0.71);
-  height: 7%;
+  padding:10px;
+  height: fit-content;
 }
 #hero-section::before{
   content: "";
@@ -107,4 +108,8 @@ transition-duration: 400ms;
   html{
     font-size:13px;
   }
+}@media (min-width: 388px) {
+}
+@media (width<= 303px){
+  
 }
