@@ -113,6 +113,8 @@ header div a:not(:first-child) {
 }
 @media (width<= 303px) {
 }
+@media (min-width: 968px) {
+}
 #new-arrival {
   font-family: "Fraunces", "Courier New", Courier, monospace;
   background: #fafafa;
@@ -132,10 +134,6 @@ header div a:not(:first-child) {
 }
 .product-price {
   color: #0cc2d0;
-}
-#new-arrival a {
-  font-size: 17px;
-  font-weight: bold;
 }
 .buy-button {
   background: #0cc2d0;
@@ -163,34 +161,47 @@ header div a:not(:first-child) {
   transition: opacity 400ms ease;
   opacity: 0.8;
 }
-#search-all{
-  color:white;
+#search-all {
+  color: white;
   background: rgba(0, 0, 0, 0.876) url("/public/img/backgroundCat.png");
   background-blend-mode: overlay;
 }
-.shirtbackground{
-  position: absolute;
-  width: 60%;
-  top:0;
-  right:0;
-  z-index:1;
-  transform: rotate(-20deg);
-}
-.grid-categories div{
+
+.grid-categories div {
   position: relative;
 }
-.grid-categories div a{
-  background:#0cc3d0e4;
-  font-size:2rem;
-  padding: 2px 15px;
+.grid-categories div a {
+  background: #0cc3d0e4;
   border-radius: 5px;
 }
 
-.grid-categories img{
+.grid-categories img {
   transition: filter 500ms ease;
-  filter:brightness(0.7) saturate(1.5);
+  filter: brightness(0.7) saturate(1.5);
 }
-.grid-categories img:hover{
+.grid-categories img:hover {
   filter: brightness(1.1);
   transition: filter 500ms ease;
+}
+#all-products {
+  background-color: #fafafa;
+}
+#all-products h5 {
+  font-family: "Fraunces", "Courier New", Courier, monospace;
+}
+.grid-cat {
+  height: 700px;
+}
+@media only screen and (width<640px){
+  .grid-cat{
+    height:fit-content;
+  }
+}
+@media only screen and (width<375px){
+  .grid-cat{
+    height:1200px;
+  }
+}
+html{
+  height:5000px;
 }
