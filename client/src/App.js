@@ -3,12 +3,13 @@ import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import { Home } from "./pages/home";
+import { dummyData } from "./dummyData";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path={"/"} element={<Home></Home>}></Route>
+        <Route exact path={"/"} element={<Home dummyData={dummyData}></Home>}></Route>
       </Routes>
     </BrowserRouter>
   );
